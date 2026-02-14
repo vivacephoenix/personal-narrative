@@ -19,14 +19,38 @@ Implement algorithms – Implement one or more algorithms that use loops and log
 
 ## Video
 
-Record a short video of your story to display here on your README. You can do this by:
+Click on the image to play the video.
 
-https://github.com/user-attachments/assets/e132217d-498b-49ce-94a9-8e619e51228c
+[![Thumbnail for my projet](thumbnail.png)](https://github.com/user-attachments/assets/e132217d-498b-49ce-94a9-8e619e51228c)
 
 ## Story Description
 
-Write a description of the story that your animation showcases. Give additional context for your story here in the case your animation is more abstract and only has images and little text. Lastly, include what data in your project is represented in 2D arrays and how those directly relate to the story your animation showcases.
+My animation showcases the history and defensive dominance of the Seattle Seahawks. The first scene highlights important retired jersey numbers and traditions, including the famous “12th Man,” which represents the fans and their impact on the game. It visually presents key historical numbers and the years jerseys were retired, while using crowd noise and other effects to create a stadium atmosphere.
+
+The second scene shifts to the “Legion of Boom,” the Seahawks’ dominant defensive unit from the early 2010s. This group included players like Richard Sherman, Earl Thomas, and Kam Chancellor. The animation emphasizes their defensive strength by displaying total tackles and applying bold image filters.
+
+The data represented in 2D arrays directly connects to the story:
+
+numbersData (2D array) stores historical jersey numbers and the year each was retired.
+
+Column 0 → Jersey number
+
+Column 1 → Year retired
+This supports the historical theme of Scene 1.
+
+defenseStats (2D array) stores defensive statistics.
+
+Column 0 → Interceptions
+
+Column 1 → Tackles
+
+Column 2 → Forced fumbles
+This supports Scene 2 by allowing the program to calculate total tackles and demonstrate statistical dominance.
+
+The 2D arrays organize related information into rows (one player or one historical entry per row) and columns (specific categories of data), which makes it easy to loop through and display meaningful football history and performance statistics.
 
 ## Image Filter Analysis
 
-Choose at least 2 filters used in your animation to explain how the pixels are modified. If you created a new image filter that was not one of the ones from this unit, make sure to explain and analyze that filter(s) before choosing ones that came from this unit.
+The applyActionGreen() filter modifies each pixel by increasing the green value while decreasing red and blue values. Specifically, green is multiplied by 1.8 (capped at 255 to prevent overflow), red is divided by 3, and blue is divided by 3. This creates a strong green tint effect, which matches the Seahawks’ team colors and gives the image a dramatic, energetic look. Mathematically, each pixel’s RGB values are adjusted individually, which changes the overall color balance of the image without affecting its structure or brightness pattern.
+
+The applyGrayscale() filter converts the image to black and white by averaging the red, green, and blue values of each pixel Then it sets red = average, green = average and blue = average. This removes all color information and keeps only brightness intensity. The result emphasizes contrast and detail rather than team colors, giving the defense scene a more serious and dramatic tone.

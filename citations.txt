@@ -1,0 +1,54 @@
+What I prompted:
+How do I calculate total tackles from my defenseStats array?
+----------------------------------------------------------------------
+What response I recieved:
+Loop through each row and add the value at index 1 (since that column stores tackles):
+
+public int getTotalTackles() {
+  int sum = 0;
+  for (int[] row : stats) {
+    sum += row[1];
+  }
+  return sum;
+}
+----------------------------------------------------------------------
+What I prompted:
+How does this enhanced for loop work?
+for (int[] row : stats)
+----------------------------------------------------------------------
+What response I recieved:
+This loop goes through each row in the 2D array.
+
+row becomes one entire 1D array at a time.
+
+Then row[1] accesses tackles.
+
+It’s cleaner than writing:
+
+for (int i = 0; i < stats.length; i++)
+----------------------------------------------------------------------
+What I prompted:
+Why isn’t my loop printing all the retired numbers?
+----------------------------------------------------------------------
+What response I recieved:
+Check:
+
+Are you looping to data.length?
+
+Did you accidentally use < data.length - 1?
+
+Are your pause() calls inside the loop?
+
+If the loop bounds are wrong, it might stop early.
+----------------------------------------------------------------------
+What I prompted:
+Why didn’t my image change after I applied the filter?
+----------------------------------------------------------------------
+What response I recieved:
+Did you redraw the image after modifying it?
+
+logo.applyActionGreen();
+drawImage(logo, 50, 60, 300);
+
+If you don’t call drawImage() again, you won’t see the updated pixels.
+----------------------------------------------------------------------
