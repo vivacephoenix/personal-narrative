@@ -45,6 +45,7 @@ Column 0 → Interceptions
 Column 1 → Tackles
 
 Column 2 → Forced fumbles
+
 This supports Scene 2 by allowing the program to calculate total tackles and demonstrate statistical dominance.
 
 The 2D arrays organize related information into rows (one player or one historical entry per row) and columns (specific categories of data), which makes it easy to loop through and display meaningful football history and performance statistics.
